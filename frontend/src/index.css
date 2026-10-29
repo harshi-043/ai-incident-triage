@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+/* Colour tokens. A calm, balanced palette: cool grey page, deep slate navigation, muted ocean-blue actions.
+   Severity colours are muted (no neon): red, burnt orange, mustard, sage. */
+@theme {
+  --color-paper: #f3f5f4;
+  --color-surface: #ffffff;
+  --color-line: #dce2df;
+  --color-ink: #1e2a30;
+  --color-muted: #58656d;
+  --color-nav: #1c2b36;
+  --color-nav-soft: #c7d3da;
+  --color-ocean-50: #e9f2f5;
+  --color-ocean-100: #cfe2e8;
+  --color-ocean-300: #8fbdcb;
+  --color-ocean-600: #1f6f8b;
+  --color-ocean-700: #195a72;
+  --color-ocean-800: #134558;
+  --color-slate-100: #e7ecee;
+  --color-slate-300: #b4c0c7;
+  --color-slate-500: #6c7b84;
+  --color-danger: #a63a33;
+  --color-danger-bg: #f6e3e1;
+  --color-warn: #8f5a0b;
+  --color-warn-bg: #f7ebcf;
+  --color-orange: #b5560f;
+  --color-orange-bg: #f8e8d9;
+  --color-ok: #2f6b49;
+  --color-ok-bg: #dfeee4;
+  --color-origin-observed: #3b4d59;
+  --color-origin-observed-bg: #e3e9ec;
+  --color-origin-runbook: #17686f;
+  --color-origin-runbook-bg: #d9ecec;
+  --color-origin-rule: #44508f;
+  --color-origin-rule-bg: #e4e7f5;
+  --color-origin-ai: #74497f;
+  --color-origin-ai-bg: #efe3f2;
+  --font-sans: "Inter", "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: ui-monospace, "SFMono-Regular", Menlo, Consolas, "Liberation Mono", monospace;
+}
+
+html, body, #root { height: 100%; }
+body {
+  margin: 0;
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Visible keyboard focus on everything interactive. */
+:focus-visible { outline: 2px solid var(--color-ocean-600); outline-offset: 2px; border-radius: 4px; }
+
+/* Recharts text should use the same colour as the rest of the app. */
+.recharts-text, .recharts-legend-item-text { fill: var(--color-muted); font-size: 12px; }
+.recharts-cartesian-grid line { stroke: var(--color-line); }
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}

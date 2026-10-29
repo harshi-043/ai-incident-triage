@@ -1,0 +1,16 @@
+# Python
+backend/.venv/
+__pycache__/
+.pytest_cache/
+*.pyc
+# Local data: database, vector index, generated sample logs
+backend/storage/
+backend/data/sample_logs/
+# Secrets
+.env
+backend/.env
+frontend/.env.local
+# Node
+frontend/node_modules/
+frontend/dist/
+.vercel/

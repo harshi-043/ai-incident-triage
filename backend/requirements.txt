@@ -1,0 +1,15 @@
+# Runtime dependencies for the AI Log/Incident Triage Assistant backend.
+# Built and tested on Python 3.13. Python 3.12 or newer is required.
+fastapi==0.162.0
+uvicorn==0.54.0
+pydantic==2.14.1
+pydantic-settings==2.16.1
+pandas==3.1.0
+numpy==2.5.4
+scikit-learn==1.9.1
+SQLAlchemy==2.1.6
+python-multipart==0.0.32
+httpx==0.28.1
+# Vector store for runbook retrieval (a NumPy fallback is used if it cannot be imported).
+# PDF runbook ingestion (optional feature, plain .md and .txt work without it).
+pypdf==6.17.0
